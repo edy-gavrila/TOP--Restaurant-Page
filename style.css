@@ -102,15 +102,25 @@ body {
 
 .tab.active {
   transform: scale(1.1);
-  background-color: rgba(190, 188, 188, 0.3);
+  background-color: rgba(146, 146, 146, 0.432);
 }
 
 .tab-title {
   text-align: center;
 }
 
-.home-tab-subtitle {
+.tab-subtitle {
   text-align: center;
+}
+
+.contact-phones-title {
+  text-align: center;
+  margin-top: 10rem;
+}
+
+.phone-numbers {
+  text-align: center;
+  margin-top: 4rem;
 }
 
 .home-image {
