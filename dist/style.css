@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: url("../assets/background.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw;
+}
+
+.title {
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.6);
+  background-color: coral;
+}
+
+.welcome-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting-card {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 3rem 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.subtitle {
+  color: rgb(70, 15, 5);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.btn-enter {
+  padding: 0.8rem 3rem;
+  border-radius: 5px;
+  border: none;
+  background-color: coral;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.btn-enter:active {
+  transform: scale(0.98);
+  background-color: rgb(196, 97, 61);
+}
+
+.tabs-container {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 2rem;
+}
+
+.tabs-content-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 85vh;
+  padding: 3rem 0;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.tabs-header {
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.tab {
+  height: 85%;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 10px 10px 0 0;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.tab.active {
+  transform: scale(1.1);
+  background-color: rgba(190, 188, 188, 0.3);
+}
+
+.tab-title {
+  text-align: center;
+}
+
+.home-tab-subtitle {
+  text-align: center;
+}
+
+.home-image {
+  width: 90%;
+  margin: 5rem auto;
+}
+
+.info-right {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.info-center {
+  text-align: center;
+}
+
+blockquote p {
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
+}
+
+.menu-content-container {
+  width: 95%;
+  display: grid;
+  margin: 2rem auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.menu-item {
+  width: 100%;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-item-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: white;
+  height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show {
+  animation: appear 0.3s;
+  height: 3rem;
+}
+.hide {
+  animation: disappear 0.3s;
+}
+
+.menu-item-image {
+  width: 100%;
+  height: auto;
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.info-card {
+  width: 60%;
+  padding: 3rem 1rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.685);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: calc(100vh / 2);
+  transform: translateY(-50%);
+
+  animation: slideIn 0.5s;
+}
+
+.hide-modal {
+  animation: slideOut 0.5s;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 760px) {
+  .menu-content-container {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-item {
+    width: 95%;
+  }
+
+  .tabs-container {
+    width: 90%;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: coral;
+}
+
+@keyframes appear {
+  from {
+    height: 0;
+  }
+  to {
+    height: 3rem;
+  }
+}
+
+@keyframes disappear {
+  from {
+    height: 3rem;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: -100%;
+  }
+
+  to {
+    top: calc(100vh / 2);
+    transform: translateY(-50%);
+  }
+}
+@keyframes slideOut {
+  from {
+    top: calc(100vh / 2);
+    transform: translateY(-50%);
+  }
+
+  to {
+    top: -100%;
+  }
+}
