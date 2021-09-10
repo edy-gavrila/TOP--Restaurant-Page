@@ -4,11 +4,13 @@ import ContactTab from "./ContactTab";
 
 const Tabs = () => {
   let currentTab = null;
-  // const { homeTab: homeTabContent } = HomeTab();
-  // currentTab = homeTabContent;
+  const { homeTab: homeTabContent } = HomeTab();
+  currentTab = homeTabContent;
 
-  const { menuTab: menuTabContent } = MenuTab();
-  currentTab = menuTabContent;
+  // const { menuTab: menuTabContent } = MenuTab();
+  // currentTab = menuTabContent;
+  // const { contactTab: contactTabContent } = ContactTab();
+  // currentTab = contactTabContent;
 
   const tabs = document.createElement("div");
   tabs.classList.add("tabs-container");

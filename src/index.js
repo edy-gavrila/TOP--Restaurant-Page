@@ -10,10 +10,10 @@ const { footer: pageFooter } = Footer();
 
 setButtonClickHandler(() => {
   initialWelcome.remove();
+  pageFooter.remove();
   document.body.appendChild(tabs);
+  document.body.appendChild(pageFooter);
 });
 
 document.body.appendChild(pageHeader);
-document.body.appendChild(tabs);
-document.body.appendChild(pageFooter);
-//document.body.appendChild(initialWelcome);
+document.body.appendChild(initialWelcome);

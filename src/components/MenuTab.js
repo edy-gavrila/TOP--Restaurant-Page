@@ -51,10 +51,16 @@ const MenuTab = () => {
       cardImage.src = item.photo;
       cardImage.classList.add("card-image");
 
+      const clickToClose = document.createElement("p");
+      clickToClose.style.textAlign = "center";
+      clickToClose.style.marginTop = "1rem";
+      clickToClose.innerText = "(click to close)";
+
       card.appendChild(cardText);
       card.appendChild(cardImage);
+      card.appendChild(clickToClose);
 
-      const { backdrop: modal } = Modal(card);
+      const { backdrop: modal } = Modal(card, pageYOffset);
 
       document.body.appendChild(modal);
     });

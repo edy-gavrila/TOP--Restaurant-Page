@@ -8,7 +8,7 @@ const HomeTab = () => {
 
   const subtitle = document.createElement("p");
   subtitle.innerText = "The best food this part of Sweden!";
-  subtitle.classList.add("home-tab-subtitle");
+  subtitle.classList.add("tab-subtitle");
 
   const image = document.createElement("img");
   image.src = "../../assets/home-image.jpg";
@@ -21,7 +21,8 @@ const HomeTab = () => {
 
   const quotation = document.createElement("figure");
   quotation.classList.add("info-center");
-  quotation.innerHTML = "<blockquote cite=''><p>The best swedish food restaurant outside of Ikea!</p></blockquote> <figcaption>--Lars Andersson, <cite>Regular customer</cite> </figcaption>"
+  quotation.innerHTML =
+    "<blockquote cite=''><p>The best swedish food restaurant outside of Ikea!</p></blockquote> <figcaption>--Lars Andersson, <cite>Regular customer</cite> </figcaption>";
 
   homeTab.appendChild(title);
   homeTab.appendChild(subtitle);
